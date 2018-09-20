@@ -10,9 +10,6 @@ namespace ECommerceApp.Controllers
     public class ProductController : Controller
     {
         IConfiguration _configuration;
-        
-
-
         List<Product> productList = new List<Product>();
         //List<Product> productList = new List<Product>()
         //{
@@ -38,17 +35,8 @@ namespace ECommerceApp.Controllers
             //_context.Products.AddRange(productList);
             //_context.SaveChanges();
 
-
-
             return _context.Products.ToList();
         }
-
-        [HttpGet("{name}")]
-        //public Product Get(string name)
-        //{
-        //    return _context.Products.First(p => p.Name == name);
-        //}
-
 
         //GET api/product/5
         [HttpGet("{id}")]
@@ -57,36 +45,22 @@ namespace ECommerceApp.Controllers
             return _context.Products.First(p => p.ProductId == id);
         }
 
-        [HttpGet, Route("GetByName/{productId}")]
-        public Product Get([FromBody] Product product, int productId)
+        [HttpGet]
+        [Route("GetById/{productId}")]
+        public Product GetById(int id)
         {
-            return _context.Products.FirstOrDefault();
-        }
-
-
-
-        [HttpGet, Route("GetByName2/{productID}/{flag}")]
-        public Product Get(string productID, int flag)
-        {
-            return _context.Products.FirstOrDefault();
+            return _context.Products.First(p => p.ProductId == id);
         }
 
         // POST api/product
         [HttpPost]
-        public void Post([FromBody]Product product)
+        public void Post(Product product)
         {
             _context.Products.Add(product);
             _context.SaveChanges();
         }
 
-        [HttpPost, Route("PostDeneme/{test}")]
-        public void PostDeneme([FromBody]Product product, string test)
-        {
-            //_context.Products.Add(product);
-            //_context.SaveChanges();
-        }
-
-
+        
         // PUT api/product/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]Product newProduct)
@@ -105,12 +79,6 @@ namespace ECommerceApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            //List<Product> list = _context.Products.ToList();
-            //foreach (var product in list)
-            //{
-            //    _context.Products.Remove(product);
-            //    _context.SaveChanges();
-            //}
             if (IsProductValid(id))
             {
                 Product product = _context.Products.Find(id);
