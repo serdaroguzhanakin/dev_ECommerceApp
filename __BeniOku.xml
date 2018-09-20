@@ -1,0 +1,48 @@
+dotnet ef migrations add InitialCreate
+kullanabilmek için nuget ten 
+Microsoft.EntityFrameworkCore.Tools 2.0.0
+Microsoft.EntityFrameworkCore.Tools.DotNet
+
+Microsoft.NETCore.App
+runtime.win-x64.Microsoft.NETCore.App
+Microsoft.EntityFrameworkCore
+
+Command prompt dan proje klasörümüze erişi komutları yazıyoruz
+cd users\\oguzhan.akin\\desktop\\projects\\udemy\\ECommerceAPP
+
+Error		Package 'Microsoft.EntityFrameworkCore.Tools.DotNet 2.0.0' has a package type 'DotnetCliTool' that is not supported by project 'ECommerceApp'.			0	
+Install-Package Microsoft.EntityFrameworkCore.Tools.DotNet -Version 2.0.3
+
+Microsoft.entityframeworkcore for Microsoft.NETCore.App 2.0.0
+
+wnd+R ile cmd ile komut penceresi açılır.
+komut : dotnet new webapi -o ECommerceApp
+
+Bir üst klasör dizinine gitmek için komut : cd ..\\
+cd komutu ile proje dosyasına girip dotnet run dersek proje çalışır
+http://localhost:5000/api/values adresine girersek projenin ayakta olduğunu görürüz.
+
+solution açıldıktan sonra entityframeworkcore paketini yüklemek için .csproj dosyası açılır ve package referans bildirimi yapılır.
+ItemGroup tag i altına aşağıdaki tanım satırı eklenir
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.0"/>
+</ItemGroup>
+
+projeye dotnet-watcher ekledi ben eklemedim.
+
+DB oluşturma için kullanılan komut : dotnet ef migrations add InitialCreate 
+Silmek için kullanacağım komut : dotnet ef migrations remove
+bunun çalışması için csprojda değişiklik yaptım.
+<ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+</ItemGroup>
+
+<ItemGroup>
+    <Compile Remove="Models\DbInitializer.cs" Version="2.0.0" />
+</ItemGroup>
+
+Projeye migrations klasörü eklendi
+
+Değişiklikleri database e kaydetmek için kullanacağım komut : dotnet ef database update
+

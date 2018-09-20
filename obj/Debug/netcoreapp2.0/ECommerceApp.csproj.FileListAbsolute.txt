@@ -1,0 +1,11 @@
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\bin\Debug\netcoreapp2.0\ECommerceApp.deps.json
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\bin\Debug\netcoreapp2.0\ECommerceApp.runtimeconfig.json
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\bin\Debug\netcoreapp2.0\ECommerceApp.runtimeconfig.dev.json
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\bin\Debug\netcoreapp2.0\ECommerceApp.dll
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\bin\Debug\netcoreapp2.0\ECommerceApp.pdb
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.csproj.CoreCompileInputs.cache
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.AssemblyInfoInputs.cache
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.AssemblyInfo.cs
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.dll
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.pdb
+C:\Users\oguzhan.akin\Desktop\Projects\Udemy\ECommerceApp\obj\Debug\netcoreapp2.0\ECommerceApp.csprojAssemblyReference.cache
